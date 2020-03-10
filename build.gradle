@@ -27,7 +27,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'org.freemarker:freemarker:2.3.30'
+    implementation "org.freemarker:freemarker:${freemarkerVersion}"
 }
 
 defaultTasks 'updateSiteZip'
@@ -36,10 +36,10 @@ build.finalizedBy(updateSiteZip)
 
 platform {
 
-    bundle(group: 'org.freemarker', name: 'freemarker', version: '2.3.30')
+    bundle(group: 'org.freemarker', name: 'freemarker', version: freemarkerVersion)
 
-    feature(id: 'contextmapper.freemarker', name: 'Freemarker Templating Engine', version: '2.3.30') {
-        plugin 'org.freemarker:freemarker:2.3.30'
+    feature(id: 'contextmapper.freemarker', name: 'Freemarker Templating Engine', version: freemarkerVersion) {
+        plugin "org.freemarker:freemarker:${freemarkerVersion}"
     }
 
     featureId 'org.contextmapper.bundles.feature.aggregation'
