@@ -1,3 +1,5 @@
+import java.text.SimpleDateFormat
+
 buildscript {
     repositories {
         jcenter()
@@ -36,9 +38,19 @@ platform {
 
     bundle(group: 'org.freemarker', name: 'freemarker', version: '2.3.30')
 
+    feature(id: 'contextmapper.freemarker', name: 'Freemarker Templating Engine', version: '2.3.30') {
+        plugin 'org.freemarker:freemarker:2.3.30'
+    }
+
+    featureId 'org.contextmapper.bundles.feature.aggregation'
+    featureName 'All Bundles (Aggregation)'
+    featureVersion project.version.toString().endsWith('SNAPSHOT') ? project.version.toString().replace("SNAPSHOT", "") + new SimpleDateFormat("YYYYMMddHHmmss").format(new Date()) : project.version.toString()
+    featureProvider 'Context Mapper'
+    categoryName 'Context Mapper OSGi Bundles'
+
     useBndHashQualifiers false
     useFeatureHashQualifiers false
-    generatePlatformFeature false
+    defaultQualifier new SimpleDateFormat("YYYYMMddHHmmss").format(new Date())
 }
 
 publishP2Repo {
@@ -48,5 +60,5 @@ publishP2Repo {
     subCompositeStrategy = 'MICRO'
     apiKey = System.getenv('BINTRAY_API_KEY')
     user = System.getenv('BINTRAY_USERNAME')
-    packageVersion = project.version
+    packageVersion = project.version.toString().endsWith('SNAPSHOT') ? project.version.toString().replace("-SNAPSHOT", ".") + new SimpleDateFormat("YYYYMMddHHmmss").format(new Date()) : project.version.toString()
 }
