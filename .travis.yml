@@ -7,7 +7,7 @@ install: "/bin/true"
 script:
 - |
   if [[ $TRAVIS_TAG =~ ^v.* ]]; then
-    ./gradlew clean build publishP2Repo
+    ./gradlew clean build publishP2Repo -Prelease.useLastTag=true
   else
     ./gradlew clean build snapshot $(if [[ $TRAVIS_BRANCH == "master" && $TRAVIS_PULL_REQUEST == 'false' ]]; then echo "publishP2Repo"; fi)
   fi
