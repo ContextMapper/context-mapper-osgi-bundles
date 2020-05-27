@@ -28,6 +28,7 @@ repositories {
 
 dependencies {
     implementation "org.freemarker:freemarker:${freemarkerVersion}"
+    implementation "io.swagger.core.v3:swagger-core:${swaggerVersion}"
 }
 
 defaultTasks 'updateSiteZip'
@@ -36,10 +37,14 @@ build.finalizedBy(updateSiteZip)
 
 platform {
 
-    bundle(group: 'org.freemarker', name: 'freemarker', version: freemarkerVersion)
-
     feature(id: 'contextmapper.freemarker', name: 'Freemarker Templating Engine', version: freemarkerVersion) {
         plugin "org.freemarker:freemarker:${freemarkerVersion}"
+    }
+
+    feature(id: 'contextmapper.swagger.core', name: 'Swagger Core', version: swaggerVersion) {
+        plugin "io.swagger.core.v3:swagger-core:${swaggerVersion}", {
+            exclude group: 'org.slf4j'
+        }
     }
 
     featureId 'org.contextmapper.bundles.feature.aggregation'
