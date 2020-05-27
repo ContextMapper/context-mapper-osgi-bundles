@@ -29,6 +29,7 @@ repositories {
 dependencies {
     implementation "org.freemarker:freemarker:${freemarkerVersion}"
     implementation "io.swagger.core.v3:swagger-core:${swaggerVersion}"
+    implementation "com.sun.activation:jakarta.activation:${jakartaAPIVersion}"
 }
 
 defaultTasks 'updateSiteZip'
@@ -45,6 +46,7 @@ platform {
         plugin "io.swagger.core.v3:swagger-core:${swaggerVersion}", {
             exclude group: 'org.slf4j'
         }
+        plugin "com.sun.activation:jakarta.activation:${jakartaAPIVersion}"
     }
 
     featureId 'org.contextmapper.bundles.feature.aggregation'
