@@ -28,7 +28,8 @@ repositories {
 
 dependencies {
     implementation "org.freemarker:freemarker:${freemarkerVersion}"
-    implementation "io.swagger.core.v3:swagger-core:${swaggerVersion}"
+    implementation "io.swagger.core.v3:swagger-core:${swaggerCoreVersion}"
+    implementation "io.swagger.parser.v3:swagger-parser:${swaggerParserVersion}"
     implementation "com.sun.activation:jakarta.activation:${jakartaAPIVersion}"
 }
 
@@ -42,11 +43,17 @@ platform {
         plugin "org.freemarker:freemarker:${freemarkerVersion}"
     }
 
-    feature(id: 'contextmapper.swagger.core', name: 'Swagger Core', version: swaggerVersion) {
-        plugin "io.swagger.core.v3:swagger-core:${swaggerVersion}", {
+    feature(id: 'contextmapper.swagger.core', name: 'Swagger Core', version: swaggerCoreVersion) {
+        plugin "io.swagger.core.v3:swagger-core:${swaggerCoreVersion}", {
             exclude group: 'org.slf4j'
         }
         plugin "com.sun.activation:jakarta.activation:${jakartaAPIVersion}"
+    }
+
+    feature(id: 'contextmapper.swagger.parser', name: 'Swagger Parser', version: swaggerParserVersion) {
+        plugin "io.swagger.parser.v3:swagger-parser:${swaggerParserVersion}", {
+            exclude group: 'org.slf4j'
+        }
     }
 
     featureId 'org.contextmapper.bundles.feature.aggregation'
