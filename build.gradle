@@ -35,6 +35,7 @@ dependencies {
 
 configurations.all {
     exclude group:"com.google.code.findbugs", module: "jsr305"
+    exclude group:"org.slf4j"
 }
 
 defaultTasks 'updateSiteZip'
