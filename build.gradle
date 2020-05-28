@@ -86,7 +86,7 @@ platform {
 
         plugin "com.google.guava:guava:27.0.1-android", {
             bnd {
-                instruction 'Import-Package', "!javax.annotation,*"
+                instruction 'Import-Package', "com.google.common.util.concurrent.internal;version=\"[1.0,2)\""
             }
         }
     }
