@@ -71,6 +71,18 @@ platform {
                 instruction 'Import-Package', "!com.google.common.base,!com.google.common.collect,!com.google.common.escape,!com.google.common.net,com.google.common.base;version=\"[16.0,28)\",com.google.common.collect;version=\"[16.0,28)\",com.google.common.escape;version=\"[16.0,28)\",com.google.common.net;version=\"[16.0,28)\",*"
             }
         }
+
+        plugin "com.github.java-json-tools:json-schema-core:1.2.8", {
+            bnd {
+                instruction 'Import-Package', "!com.google.common.base,!com.google.common.cache,!com.google.common.collect,!com.google.common.io,!com.google.common.net,!com.google.common.primitives,com.google.common.base;version=\"[16.0,28)\",com.google.common.cache;version=\"[16.0,28)\",com.google.common.collect;version=\"[16.0,28)\",com.google.common.io;version=\"[16.0,28)\",com.google.common.net;version=\"[16.0,28)\",com.google.common.primitives;version=\"[16.0,28)\",*"
+            }
+        }
+
+        plugin "com.github.java-json-tools:json-schema-validator:2.2.8", {
+            bnd {
+                instruction 'Import-Package', "!com.google.common.base,!com.google.common.collect,!com.google.common.net,com.google.common.base;version=\"[16.0,28)\",com.google.common.collect;version=\"[16.0,28)\",com.google.common.net;version=\"[16.0,28)\",*"
+            }
+        }
     }
 
     featureId 'org.contextmapper.bundles.feature.aggregation'
