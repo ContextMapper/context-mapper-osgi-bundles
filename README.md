@@ -12,3 +12,5 @@ We use it to bundle thirdparty libraries that are used in our [Context Mapper Ec
  ## Available Libraries
  The P2 repository currently contains the following libraries as OSGi bundles:
   * [Freemarker](https://freemarker.apache.org/) (v2.3.30)
+  * [Swagger Core](https://github.com/swagger-api/swagger-core/) (v2.1.2)
+  * [Swagger Parser](https://github.com/swagger-api/swagger-parser/) (v2.0.20)
