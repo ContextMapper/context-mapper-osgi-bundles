@@ -31,6 +31,7 @@ dependencies {
     implementation "io.swagger.core.v3:swagger-core:${swaggerCoreVersion}"
     implementation "io.swagger.parser.v3:swagger-parser:${swaggerParserVersion}"
     implementation "com.sun.activation:jakarta.activation:${jakartaAPIVersion}"
+    implementation "io.github.stefan-ka:protobufgen:${protoSerializerVersion}"
 }
 
 configurations.all {
@@ -106,6 +107,10 @@ platform {
                 instruction 'Import-Package', "!javax.annotation,*"
             }
         }
+    }
+
+    feature(id: 'contextmapper.protobufgen', name: 'Protocol Buffer Generator Library', version: protoSerializerVersion) {
+        plugin "io.github.stefan-ka:protobufgen:${protoSerializerVersion}"
     }
 
     featureId 'org.contextmapper.bundles.feature.aggregation'
