@@ -14,3 +14,4 @@ We use it to bundle thirdparty libraries that are used in our [Context Mapper Ec
   * [Freemarker](https://freemarker.apache.org/) (v2.3.30)
   * [Swagger Core](https://github.com/swagger-api/swagger-core/) (v2.1.2)
   * [Swagger Parser](https://github.com/swagger-api/swagger-parser/) (v2.0.20)
+  * [stefan-ka's \*.proto Generator (Protocol Buffers)](https://github.com/stefan-ka/protobufgen) (v1.2.0)
