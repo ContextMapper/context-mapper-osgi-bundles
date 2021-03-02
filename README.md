@@ -1,6 +1,6 @@
 ![Context Mapper](https://raw.githubusercontent.com/wiki/ContextMapper/context-mapper-dsl/logo/cm-logo-github-small.png) 
 # Context Mapper OSGi Bundles (P2 Publishing Build)
-[![Build Status](https://travis-ci.com/ContextMapper/context-mapper-osgi-bundles.svg?branch=master)](https://travis-ci.com/ContextMapper/context-mapper-osgi-bundles) [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) [ ![Download](https://api.bintray.com/packages/contextmapper/context-mapper-osgi-bundles/updatesites/images/download.svg) ](https://bintray.com/contextmapper/context-mapper-osgi-bundles/updatesites/_latestVersion)
+[![Build (master)](https://github.com/ContextMapper/context-mapper-osgi-bundles/actions/workflows/build_master.yml/badge.svg)](https://github.com/ContextMapper/context-mapper-osgi-bundles/actions) [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) [ ![Download](https://api.bintray.com/packages/contextmapper/context-mapper-osgi-bundles/updatesites/images/download.svg) ](https://bintray.com/contextmapper/context-mapper-osgi-bundles/updatesites/_latestVersion)
 
 This [Context Mapper](https://contextmapper.org/) repository contains a Gradle build that publishes configured libraries as OSGi bundles to our P2 repository.
 We use it to bundle thirdparty libraries that are used in our [Context Mapper Eclipse Plugin](https://github.com/ContextMapper/context-mapper-dsl).
