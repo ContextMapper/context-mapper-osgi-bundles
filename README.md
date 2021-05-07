@@ -6,8 +6,8 @@ This [Context Mapper](https://contextmapper.org/) repository contains a Gradle b
 We use it to bundle thirdparty libraries that are used in our [Context Mapper Eclipse Plugin](https://github.com/ContextMapper/context-mapper-dsl).
 
 ## P2 Repositories
- * [context-mapper-osgi-bundle-snapshots](https://dl.bintray.com/contextmapper/context-mapper-osgi-bundle-snapshots/): Snapshots built on the _master_ branch are published here.
- * [context-mapper-osgi-bundles](https://dl.bintray.com/contextmapper/context-mapper-osgi-bundles/): Released P2 repositories (built on release tags).
+ * [context-mapper-osgi-bundle-snapshots](https://contextmapper.jfrog.io/artifactory/context-mapper-osgi-bundle-snapshots/): Snapshots built on the _master_ branch are published here.
+ * [context-mapper-osgi-bundles](https://contextmapper.jfrog.io/artifactory/context-mapper-osgi-bundles/): Released P2 repositories (built on release tags).
  
  ## Available Libraries
  The P2 repository currently contains the following libraries as OSGi bundles:
