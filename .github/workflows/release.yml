@@ -31,6 +31,6 @@ jobs:
     - name: Release with Gradle
       run: ./gradlew clean build publishP2Repo -Prelease.useLastTag=true
       env:
-        BINTRAY_API_KEY: ${{ secrets.BINTRAY_API_KEY }}
-        BINTRAY_USERNAME: ${{ secrets.BINTRAY_USERNAME }}
+        ARTIFACTORY_API_KEY: ${{ secrets.ARTIFACTORY_API_KEY }}
+        ARTIFACTORY_USERNAME: ${{ secrets.ARTIFACTORY_USERNAME }}
 
